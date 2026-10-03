@@ -1,0 +1,167 @@
+/* Shared colors let the entire interface follow Bootstrap's theme. */
+:root,
+[data-bs-theme="dark"] {
+  --app-bg: #111113;
+  --app-text: #f2f2f4;
+  --app-nav: #161619;
+  --app-border: #333338;
+  --app-muted: #b0b0ba;
+  --app-panel: #1b1b1f;
+  --app-table-head: #232328;
+  --app-input: #151518;
+}
+
+[data-bs-theme="light"] {
+  --app-bg: #ffffff;
+  --app-text: #202027;
+  --app-nav: #ffffff;
+  --app-border: #d9d9e1;
+  --app-muted: #60606d;
+  --app-panel: #ffffff;
+  --app-table-head: #f3f3f6;
+  --app-input: #ffffff;
+}
+
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app-navbar {
+  background-color: var(--app-nav);
+  border-bottom: 1px solid var(--app-border);
+  padding: 18px 0;
+}
+
+.brand-dot {
+  color: #e3384c;
+}
+
+.text-secondary {
+  color: var(--app-muted) !important;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 16px;
+}
+
+.summary-card {
+  background-color: var(--app-panel);
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.total-card {
+  background-color: #b91f35;
+  border-color: #b91f35;
+  color: #ffffff;
+}
+
+.summary-value {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 767px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.expenses-panel {
+  background-color: var(--app-panel);
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.expenses-table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--app-text);
+  --bs-table-border-color: var(--app-border);
+}
+
+.expenses-table thead th {
+  background-color: var(--app-table-head);
+  color: var(--app-muted);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.expenses-table th,
+.expenses-table td {
+  padding: 16px 12px;
+}
+
+.expense-title {
+  min-width: 160px;
+  overflow-wrap: anywhere;
+}
+
+.expense-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.form-control,
+.form-select {
+  background-color: var(--app-input);
+  border-color: var(--app-border);
+  color: var(--app-text);
+  min-height: 44px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--app-input);
+  color: var(--app-text);
+  border-color: #e3384c;
+  box-shadow: 0 0 0 0.2rem rgb(227 56 76 / 20%);
+}
+
+#addButton {
+  min-height: 44px;
+}
+.modal-content {
+  background-color: var(--app-panel);
+  color: var(--app-text);
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: var(--app-border);
+}
+
+.btn-theme {
+  --bs-btn-color: var(--app-text);
+  --bs-btn-border-color: var(--app-text);
+  --bs-btn-hover-color: var(--app-bg);
+  --bs-btn-hover-bg: var(--app-text);
+  --bs-btn-hover-border-color: var(--app-text);
+  --bs-btn-active-color: var(--app-bg);
+  --bs-btn-active-bg: var(--app-text);
+  --bs-btn-active-border-color: var(--app-text);
+  --bs-btn-disabled-color: var(--app-text);
+  --bs-btn-disabled-border-color: var(--app-text);
+}
+
+.btn-theme:focus-visible {
+  outline: 3px solid #e3384c;
+  outline-offset: 3px;
+}
+
+#themeToggle {
+  min-height: 44px;
+}
+
+.app-navbar .container {
+  gap: 12px;
+}
